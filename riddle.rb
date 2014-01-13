@@ -22,15 +22,15 @@ end
 puts "^^^^^^^^^^^^^^^^^^^^^^^\nWelcome to \"The Riddle\"\n^^^^^^^^^^^^^^^^^^^^^^^"
 
 while text != ""
-  puts "\nWrite some text. Hit Enter (and nothing else) to exit."
+  puts "\nWrite some text to play. Hit Enter (and nothing else) to exit.\n\n"
   text = gets.chomp
   if text == ""
     break
   else
-    puts "\n\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+    puts "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
     puts "^^^^^^  #{give_score(text, calc_score(text))}  ^^^^^"
     puts "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-    puts "\nType 'yes' to solve the riddle. Hit Enter to continue."
+    puts "\nType 'yes' to solve the riddle of how your score is generated. Hit Enter to keep playing."
     rand_text = generate
     ready = gets.chomp
     if ready  == "yes"
@@ -38,12 +38,13 @@ while text != ""
       puts "\nWhat is the score of the following text '#{rand_text}'\?"
       answer = gets.chomp.to_i
       if answer == calc_score(rand_text)
-        puts "\nNice work! You win!"
+        puts "\nNice work!! You win!"
       else
-        puts "\nSooooory..."
+        puts "\nSooooorry..."
       end
       break
     end
+    puts "\nOK, still trying..."
   end
 end
 

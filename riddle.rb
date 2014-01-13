@@ -28,7 +28,7 @@ while text != ""
     break
   else
     puts "\n\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-    puts "^^^^^^  #{give_score(text, calc_score(text))}  ^^^^^^"
+    puts "^^^^^^  #{give_score(text, calc_score(text))}  ^^^^^"
     puts "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
     puts "\nType 'yes' to solve the riddle. Hit Enter to continue."
     rand_text = generate

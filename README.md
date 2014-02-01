@@ -2,7 +2,7 @@
 Ruby
 ====
 
-A small set of Ruby scripts and "The Riddle" game.
+A set of Ruby scripts and "The Riddle" game.
 ------------
 Jason Mahony
 

@@ -20,7 +20,7 @@ end
  
 def formatting(input)
   puts "^".center(60, "^")
-  puts input.center(60, "^")
+  puts input.center(60, " ")
   puts "^".center(60, "^")
 end
   

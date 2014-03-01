@@ -1,4 +1,4 @@
-require_relative 'clumsy_player'
+#!/usr/bin/env ruby
 
 describe ClumsyPlayer do
   before do

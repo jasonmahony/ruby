@@ -1,4 +1,4 @@
-require_relative 'berserk_player'
+#!/usr/bin/env ruby
 
 describe BerserkPlayer do
   

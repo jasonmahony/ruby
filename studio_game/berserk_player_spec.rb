@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require_relative 'berserk_player'
+
 describe BerserkPlayer do
   
   before do

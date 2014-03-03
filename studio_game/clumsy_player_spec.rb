@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require_relative 'clumsy_player'
+
 describe ClumsyPlayer do
   before do
     @player = ClumsyPlayer.new("klutz")

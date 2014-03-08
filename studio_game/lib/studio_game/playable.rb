@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-
-
 module StudioGame
   module Playable
     def w00t()

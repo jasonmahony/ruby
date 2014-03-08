@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
+require_relative 'playable'
 require_relative 'Game'
 
 module StudioGame
   class Player
+    include Playable
     attr_accessor :name
     attr_reader :health
     def initialize(name, health=150)
@@ -19,17 +21,6 @@ module StudioGame
     end
     def score()
       @health + points
-    end
-    def w00t()
-      @health += 15
-      puts "#{@name} got w00ted!"
-    end
-    def blam()
-      @health -= 10
-      puts "#{@name} got blammed!"
-    end
-    def strong?
-      @health >= 100
     end
     def <=>(other)
       other.score <=> score

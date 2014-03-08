@@ -3,19 +3,18 @@
 require_relative 'auditable'
 
 module StudioGame
-  class Die
-    include Auditable
-
+  class LoadedDie
     attr_reader :number
-  
+    
     def roll
-      @number = rand(1..6)
+      numbers = [1, 1, 2, 5, 6, 6]
+      @number = numbers.sample
       audit
       @number
-    end 
+    end  
   end
 end
 
 if __FILE__ == $0
-  puts Die.new
+  puts LoadedDie.new
 end

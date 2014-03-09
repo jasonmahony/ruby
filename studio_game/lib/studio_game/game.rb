@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
-require_relative 'player'
-require_relative 'die'
-require_relative 'game_turn'
-require_relative 'treasure_trove'
+
+require 'studio_game/player'
+require 'studio_game/die'
+require 'studio_game/game_turn'
+require 'studio_game/treasure_trove'
 
 module StudioGame
   class Game

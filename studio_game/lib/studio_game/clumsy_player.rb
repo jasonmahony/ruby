@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'player'
+require 'studio_game/player'
 
 module StudioGame
   class ClumsyPlayer < Player

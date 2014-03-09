@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require_relative 'player'
-require_relative 'treasure_trove'
+require 'studio_game/player'
+require 'studio_game/treasure_trove'
 
 module StudioGame
   describe Player do

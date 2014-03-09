@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative 'game'
+require 'studio_game/game'
 
 module StudioGame
   describe Game do

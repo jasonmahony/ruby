@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'studio_game/die'
+require_relative 'die'
 
 module StudioGame
   module Auditable

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'studio_game/auditable'
+require_relative 'auditable'
 
 module StudioGame
   class LoadedDie

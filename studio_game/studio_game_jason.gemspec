@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name         = "mahony_game"
+  s.name         = "studio_game_jason"
   s.version      = "1.0.0"
   s.author       = "Jason C Mahony"
   s.email        = "jason.mahony@gmail.com"

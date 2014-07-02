@@ -16,7 +16,7 @@ def runoff(voters)
   sorted_array = count.sort_by {|k, v| v}.reverse
   if sorted_array[0][1] > num / 2
     return sorted_array[0][0]
-  elsif sorted_array[0][1] == sorted_array[2][1] 
+  elsif sorted_array[0][1] == sorted_array[2][1]
     return nil
   else
     runoff(voters)

@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
+# Sums 2 equal sized matrices
 def matrixAddition(a, b)
   n = a.length
   c = Array.new
   0.upto(n-1) do |x|
-# reinitialize the sum_array otherwise values from previous iteration carry over
+  # reinitialize the sum_array otherwise values from previous iteration carry over
   sum_array = Array.new  
     0.upto(n-1) do |y|
       sum_array = sum_array.push(a[x][y] + b[x][y])

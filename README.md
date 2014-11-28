@@ -1,13 +1,7 @@
-====
 Ruby
 ====
+A set of Ruby scripts, functions and games.
+Includes an Interactive "studio_game" application completed as part of Pragmatic Studio Online Course.
 
-A set of Ruby scripts and "The Riddle" game.
-------------
+-----------
 Jason Mahony
-
-Interactive application completed as part of course work.
------------------------
-Pragmatic Studio Online
-
-

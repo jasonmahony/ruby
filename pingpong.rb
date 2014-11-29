@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+# Returns who's turn it is in ping-pong match based on score input
 def service(score)
   sum = score.split(":").map(&:to_i).reduce(:+)
   if sum < 40

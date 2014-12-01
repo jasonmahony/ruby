@@ -1,18 +1,15 @@
 #!/usr/bin/env ruby
 
-def evalidate(email)
-  retun false if email !~ /\@/
-  nameDomain = email.split('@')
-  return false unless nameDomain.size == 2
-  validRootDomains = [com, net, ca, biz]
-  if nameDomain[1].split(".").last.any? { |domain| validRootDomains.include? domain }
-    return true
-  else
-    return false  
-  end
+def validate(email)
+  e = email.chars
+  return false unless e.select { |a| a = '@' }
+  return false if e.grep =~ /^(\.)+|(\.)+\@|\@(\.)+|(\.)+$|\s/
+  root = email.split('.').last
+  return false unless email.split('.').last =~ /[a-z]{2,4}/
 end
 
-puts evalidate("jason.mahony@gmail.com")
-puts evalidate("notreal.net")
-puts evalidate("jason.mahony@gmail.dude.ca")
-pust evalidate("noway")
+puts validate("jason.mahony@gmail.com")
+puts validate("notreal.net")
+puts validate("jason.mahony@gmail.dude.ca")
+puts validate("noway")
+puts validate("jason@server.")

@@ -1,4 +1,4 @@
-#/usr/bin/env ruby
+#!/usr/bin/env ruby
 
 def wait_for_thread(threads)
   return nil if threads == []

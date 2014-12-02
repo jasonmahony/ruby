@@ -17,3 +17,4 @@ puts validate(".noway")
 puts validate("jason@server.")
 puts validate("jason@se@rver.")
 puts validate("jas@vm..comm")
+

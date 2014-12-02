@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
+# Take an unlimited number of arguments
 def sum(*args)
+  # Select the integer args and sum them
   args.select { |x| x.is_a?(Integer) }.reduce(:+)
 end
 

@@ -31,8 +31,24 @@ def runoff(voters)
 #    return nil
 #  end
 
-1.upto(voters.size) do |n|
-  voters.each { |ballot| ballot[0] 
+
+#0.upto(voters.size - 1) do |ballot|
+#  count = Hash[voters[0].map { |i| [i, 0] }]
+
+#  num_candidates = voters[0].size
+
+  num_voters = voters.size
+  num_candidates = voters[0].size
+  count = Hash[ voters[0].map { |i| [i, 0] }]
+  voters.each do |ballot|
+    count[ballot[0]] += 1 
+  end
+  [key, value] = count.max_by { |k, v| v }
+  count.delete[key]
+  count.each { |k, v| k if v > count.values.max / 2 } 
+    
+    runoff([voters[(num_voters - 1)..-1 ]]) unless num_voters == 0
+
 
 end
 

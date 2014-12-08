@@ -2,7 +2,7 @@
 
 # Take an unlimited number of arguments
 def sum(*args)
-  # Select the integer args and sum them
+  # Select the integer args and sum
   args.select { |x| x.is_a?(Integer) }.reduce(:+)
 end
 

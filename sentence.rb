@@ -1,25 +1,10 @@
 #!/usr/bin/env ruby
 
+# Makes a sentence out of string array elements
 def make_sentence parts
-  if parts[0] == "," || parts[0] == "."
-    make_sentence(parts[1..-1])
-  else    
-    sentence = Array.new
-    parts.each do |word|
-      if word == ","
-        sentence = sentence.push(sentence.pop.chars.slice(0..-2).join).push(", ")
-      elsif word == "."
-      else
-        sentence = sentence.push("#{word} ")
-      end
-    end
-  end
-  puts sentence.push(sentence.pop.chars.slice(0..-2).join).push('.').join
-
+  # Join the strings to create a sentence
+  # Add spaces after commas and end with a period
+  parts.join(' ').gsub(/\s[,.]/," ," => ",", " ." => "") << "."
 end
 
-def make_sentence2 parts
-  puts parts.join(' ').gsub(/\s[,.]/," ," => ",", " ." => "") << "."
-end
-
-make_sentence(['.', ',', 'hello', ',', '.', 'my', 'dear'])
+puts make_sentence(['hello', ',', '.', 'my', 'dear'])

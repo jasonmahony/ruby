@@ -2,13 +2,14 @@
 
 def guess_gifts(wishlist, presents)
   gifts = Array.new
-  presents.each do |pres_hsh|
-    gifts = wishlist.select do |wish_hsh|
-      wish_hsh[:size] == pres_hsh[:size] && wish_hsh[:clatters] == pres_hsh[:clatters] && wish_hsh[:weight] == pres_hsh[:weight]
+  presents.each do |p|
+    wishlist.each do |w|
+      if w[:size] == p[:size] && w[:clatters] == p[:clatters] && w[:weight] == p[:weight]
+        gifts.push(w[:name])
+      end
     end
   end
-  return gifts
-#  return gifts.map { |gift| gift[:name] }
+  gifts.uniq
 end
 
 wishlist = [

@@ -2,9 +2,11 @@
 
 def guess_gifts(wishlist, presents)
   gifts = Array.new
+  # iterate through present and wishlist hashes and find matches
   presents.each do |p|
     wishlist.each do |w|
       if w[:size] == p[:size] && w[:clatters] == p[:clatters] && w[:weight] == p[:weight]
+        # Add matches to the gifts array
         gifts.push(w[:name])
       end
     end
@@ -23,4 +25,5 @@ presents = [
     {:size => "small", :clatters => "yes", :weight => "light"}
 ]
 
-puts guess_gifts(wishlist, presents) # must return ['toy car', 'mini puzzle']
+# must return ['toy car', 'mini puzzle']
+puts guess_gifts(wishlist, presents)
